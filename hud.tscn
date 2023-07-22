@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvhoftpbba8md"]
+
+[ext_resource type="Texture2D" uid="uid://cqko6n6r86j8q" path="res://assets/art/mouseLeft.png" id="2_blveh"]
+[ext_resource type="Theme" uid="uid://d0quapjxkreie" path="res://assets/main_theme.tres" id="2_d73to"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Instructions" type="VBoxContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = -74.0
+offset_right = 144.0
+offset_bottom = -14.0
+grow_vertical = 0
+theme_override_constants/separation = 4
+
+[node name="Movement" type="Label" parent="Instructions"]
+layout_mode = 2
+theme = ExtResource("2_d73to")
+theme_override_font_sizes/font_size = 20
+text = "Move with"
+
+[node name="Mouse" type="TextureRect" parent="Instructions/Movement"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -20.0
+offset_right = 17.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.96, 0.96)
+texture = ExtResource("2_blveh")
+
+[node name="Goal" type="Label" parent="Instructions"]
+layout_mode = 2
+theme = ExtResource("2_d73to")
+theme_override_font_sizes/font_size = 20
+text = "Find the exit!"

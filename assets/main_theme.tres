@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://d0quapjxkreie"]
+
+[ext_resource type="FontFile" uid="uid://cmyhjwki1p18s" path="res://assets/font/Kenney Mini.ttf" id="1_m1wtr"]
+
+[resource]
+default_font = ExtResource("1_m1wtr")
+default_font_size = 40
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)

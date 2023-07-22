@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6iokkqme5chq"]
+
+[ext_resource type="Theme" uid="uid://d0quapjxkreie" path="res://assets/main_theme.tres" id="1_bvgn5"]
+
+[node name="Credits" type="CanvasLayer"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -138.0
+offset_right = 160.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_bvgn5")
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Art" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Art:
+Kenney.nl"
+horizontal_alignment = 1
+
+[node name="Sound" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Sounds:
+Kenney.nl"
+horizontal_alignment = 1
+
+[node name="Music" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Music:
+'Big Eyes' by Rafael Krux"
+horizontal_alignment = 1

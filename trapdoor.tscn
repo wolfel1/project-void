@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://0e3e7f3hjifl"]
+
+[ext_resource type="Texture2D" uid="uid://xgnqyl5rjpo7" path="res://assets/art/tilemap.png" id="1_vw1kh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcy1i"]
+atlas = ExtResource("1_vw1kh")
+region = Rect2(102, 85.14, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ix2e"]
+size = Vector2(8, 8)
+
+[node name="Trapdoor" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_dcy1i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_7ix2e")

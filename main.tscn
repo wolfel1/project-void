@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=3 uid="uid://kmrgqmyonlbp"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_ilvps"]
+[ext_resource type="PackedScene" uid="uid://hlqny743oha6" path="res://dungeon.tscn" id="1_v767v"]
+[ext_resource type="PackedScene" uid="uid://tua6bioq8h8h" path="res://player.tscn" id="2_px8y8"]
+[ext_resource type="PackedScene" uid="uid://cvhoftpbba8md" path="res://hud.tscn" id="4_e3bvo"]
+[ext_resource type="AudioStream" uid="uid://bkbrh284j202t" path="res://assets/audio/Big Eyes.mp3" id="4_hr4qh"]
+[ext_resource type="PackedScene" uid="uid://cs548ni66evpi" path="res://win_screen.tscn" id="4_uog8q"]
+
+[sub_resource type="Animation" id="Animation_s2te5"]
+resource_name = "FadeOutMusic"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackgroundMusic/Music:volume_db")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1.93187, 1.93187),
+"update": 0,
+"values": [-10.03, -80.0]
+}
+
+[sub_resource type="Animation" id="Animation_ibeno"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BackgroundMusic/Music:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-10.03]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5avy8"]
+_data = {
+"FadeOutMusic": SubResource("Animation_s2te5"),
+"RESET": SubResource("Animation_ibeno")
+}
+
+[node name="Main" type="Node"]
+script = ExtResource("1_ilvps")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
+
+[node name="Dungeon" parent="." instance=ExtResource("1_v767v")]
+
+[node name="Player" parent="." instance=ExtResource("2_px8y8")]
+scale = Vector2(0.280001, 0.280001)
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(35, 52)
+
+[node name="HUD" parent="." instance=ExtResource("4_e3bvo")]
+
+[node name="WinScreen" parent="." instance=ExtResource("4_uog8q")]
+
+[node name="BackgroundMusic" type="Node" parent="."]
+
+[node name="FadeOutMusic" type="AnimationPlayer" parent="BackgroundMusic"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_5avy8")
+}
+
+[node name="Music" type="AudioStreamPlayer" parent="BackgroundMusic"]
+stream = ExtResource("4_hr4qh")
+volume_db = -10.03
+autoplay = true
+
+[connection signal="trapdoor_entered" from="Dungeon" to="." method="_on_dungeon_trapdoor_entered"]
