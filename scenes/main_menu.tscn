@@ -1,13 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://drx0y4yklov68"]
+[gd_scene load_steps=5 format=3 uid="uid://t6n23lpa1y4c"]
 
-[ext_resource type="Theme" uid="uid://d0quapjxkreie" path="res://assets/main_theme.tres" id="1_3d3rt"]
-[ext_resource type="Script" path="res://main_menu.gd" id="1_q6jwy"]
-[ext_resource type="PackedScene" uid="uid://kmrgqmyonlbp" path="res://main.tscn" id="2_t0aa8"]
-[ext_resource type="PackedScene" uid="uid://b6iokkqme5chq" path="res://credits.tscn" id="4_8ao3f"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_kee13"]
+[ext_resource type="PackedScene" uid="uid://kmrgqmyonlbp" path="res://scenes/main.tscn" id="2_glmg3"]
+[ext_resource type="Theme" uid="uid://d0quapjxkreie" path="res://assets/resources/main_theme.tres" id="3_qw17j"]
+[ext_resource type="PackedScene" uid="uid://b6iokkqme5chq" path="res://scenes/credits.tscn" id="4_fkp68"]
 
 [node name="MainMenu" type="CanvasLayer"]
-script = ExtResource("1_q6jwy")
-game_scene = ExtResource("2_t0aa8")
+script = ExtResource("1_kee13")
+game_scene = ExtResource("2_glmg3")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -26,7 +26,7 @@ offset_top = 28.0
 offset_right = 190.5
 offset_bottom = 94.0
 grow_horizontal = 2
-theme = ExtResource("1_3d3rt")
+theme = ExtResource("3_qw17j")
 theme_override_colors/font_color = Color(0.803922, 0.776471, 0.913725, 1)
 theme_override_font_sizes/font_size = 50
 text = "Tiny Expedition"
@@ -50,7 +50,7 @@ alignment = 1
 layout_mode = 2
 focus_neighbor_bottom = NodePath("../CreditsButton")
 focus_next = NodePath("../CreditsButton")
-theme = ExtResource("1_3d3rt")
+theme = ExtResource("3_qw17j")
 theme_override_font_sizes/font_size = 60
 text = "Start"
 flat = true
@@ -59,11 +59,11 @@ flat = true
 layout_mode = 2
 focus_neighbor_top = NodePath("../StartButton")
 focus_previous = NodePath("../StartButton")
-theme = ExtResource("1_3d3rt")
+theme = ExtResource("3_qw17j")
 text = "Credits"
 flat = true
 
-[node name="Credits" parent="." instance=ExtResource("4_8ao3f")]
+[node name="Credits" parent="." instance=ExtResource("4_fkp68")]
 visible = false
 
 [node name="BackButton" type="Button" parent="."]
@@ -79,7 +79,7 @@ offset_right = -20.0
 offset_bottom = -20.0
 grow_horizontal = 0
 grow_vertical = 0
-theme = ExtResource("1_3d3rt")
+theme = ExtResource("3_qw17j")
 theme_override_font_sizes/font_size = 30
 text = "Back"
 flat = true

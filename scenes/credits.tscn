@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b6iokkqme5chq"]
 
-[ext_resource type="Theme" uid="uid://d0quapjxkreie" path="res://assets/main_theme.tres" id="1_bvgn5"]
+[ext_resource type="Theme" uid="uid://d0quapjxkreie" path="res://assets/resources/main_theme.tres" id="1_bvgn5"]
 
 [node name="Credits" type="CanvasLayer"]
 

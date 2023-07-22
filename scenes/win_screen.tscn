@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cs548ni66evpi"]
+[gd_scene load_steps=3 format=3 uid="uid://du7sak3k2mquf"]
 
-[ext_resource type="Theme" uid="uid://d0quapjxkreie" path="res://assets/main_theme.tres" id="1_853ug"]
-[ext_resource type="Script" path="res://win_screen.gd" id="1_r1e2h"]
+[ext_resource type="Script" path="res://scripts/win_screen.gd" id="1_r1e2h"]
+[ext_resource type="Theme" uid="uid://d0quapjxkreie" path="res://assets/resources/main_theme.tres" id="2_akh3y"]
 
 [node name="WinScreen" type="CanvasLayer"]
 script = ExtResource("1_r1e2h")
@@ -26,13 +26,13 @@ offset_right = 250.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_853ug")
+theme = ExtResource("2_akh3y")
 theme_override_constants/separation = 7
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("1_853ug")
+theme = ExtResource("2_akh3y")
 theme_override_font_sizes/font_size = 40
 text = "You have found the exit!"
 horizontal_alignment = 1

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvhoftpbba8md"]
 
+[ext_resource type="Theme" uid="uid://d0quapjxkreie" path="res://assets/resources/main_theme.tres" id="1_qeeib"]
 [ext_resource type="Texture2D" uid="uid://cqko6n6r86j8q" path="res://assets/art/mouseLeft.png" id="2_blveh"]
-[ext_resource type="Theme" uid="uid://d0quapjxkreie" path="res://assets/main_theme.tres" id="2_d73to"]
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -18,7 +18,7 @@ theme_override_constants/separation = 4
 
 [node name="Movement" type="Label" parent="Instructions"]
 layout_mode = 2
-theme = ExtResource("2_d73to")
+theme = ExtResource("1_qeeib")
 theme_override_font_sizes/font_size = 20
 text = "Move with"
 
@@ -40,6 +40,6 @@ texture = ExtResource("2_blveh")
 
 [node name="Goal" type="Label" parent="Instructions"]
 layout_mode = 2
-theme = ExtResource("2_d73to")
+theme = ExtResource("1_qeeib")
 theme_override_font_sizes/font_size = 20
 text = "Find the exit!"

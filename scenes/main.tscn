@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://kmrgqmyonlbp"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_ilvps"]
-[ext_resource type="PackedScene" uid="uid://hlqny743oha6" path="res://dungeon.tscn" id="1_v767v"]
-[ext_resource type="PackedScene" uid="uid://tua6bioq8h8h" path="res://player.tscn" id="2_px8y8"]
-[ext_resource type="PackedScene" uid="uid://cvhoftpbba8md" path="res://hud.tscn" id="4_e3bvo"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_1vfs6"]
+[ext_resource type="PackedScene" uid="uid://bfqdrugh3ymy4" path="res://scenes/dungeon.tscn" id="1_v767v"]
+[ext_resource type="PackedScene" uid="uid://byacmcij1k5xx" path="res://scenes/player.tscn" id="2_px8y8"]
+[ext_resource type="PackedScene" uid="uid://cvhoftpbba8md" path="res://scenes/hud.tscn" id="4_e3bvo"]
 [ext_resource type="AudioStream" uid="uid://bkbrh284j202t" path="res://assets/audio/Big Eyes.mp3" id="4_hr4qh"]
-[ext_resource type="PackedScene" uid="uid://cs548ni66evpi" path="res://win_screen.tscn" id="4_uog8q"]
+[ext_resource type="PackedScene" uid="uid://du7sak3k2mquf" path="res://scenes/win_screen.tscn" id="4_uog8q"]
 
 [sub_resource type="Animation" id="Animation_s2te5"]
 resource_name = "FadeOutMusic"
@@ -45,7 +45,7 @@ _data = {
 }
 
 [node name="Main" type="Node"]
-script = ExtResource("1_ilvps")
+script = ExtResource("1_1vfs6")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)

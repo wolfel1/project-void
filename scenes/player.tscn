@@ -1,6 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://tua6bioq8h8h"]
+[gd_scene load_steps=16 format=3 uid="uid://byacmcij1k5xx"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_c43gl"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_ea60k"]
 [ext_resource type="Texture2D" uid="uid://b3viy8t38mhgt" path="res://assets/art/character_spritesheet.png" id="2_ld8an"]
 [ext_resource type="Texture2D" uid="uid://c8yjp3k5kwtao" path="res://assets/art/2d_lights_and_shadows_neutral_point_light.webp" id="3_i37mp"]
 [ext_resource type="AudioStream" uid="uid://tb4joq5yrmvh" path="res://assets/audio/footstep09.ogg" id="4_jn7v5"]
@@ -105,7 +105,7 @@ motion_mode = 1
 wall_min_slide_angle = 0.0
 platform_on_leave = 2
 safe_margin = 0.001
-script = ExtResource("1_c43gl")
+script = ExtResource("1_ea60k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_cubmy")
